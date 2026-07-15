@@ -1,0 +1,34 @@
+START
+
+Input the number of caves (N)
+
+FOR each cave
+    Input cave name
+    Input connected caves
+    Store in graph
+END FOR
+
+Input starting cave
+
+Create an empty list VISITED
+
+FUNCTION DFS(cave)
+
+    Mark cave as visited
+    Print "Drone entered", cave
+
+    FOR each connected cave
+        IF connected cave is not visited
+            Call DFS(connected cave)
+        END IF
+    END FOR
+
+    Print "Backtracking from", cave
+
+END FUNCTION
+
+Print "Rescue Drone Exploration"
+
+Call DFS(starting cave)
+
+STOP

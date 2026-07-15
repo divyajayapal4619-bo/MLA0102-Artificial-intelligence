@@ -1,0 +1,44 @@
+START
+
+Input the number of rooms (N)
+
+FOR each room
+    Input room name
+    Input connected rooms
+    Store in graph
+END FOR
+
+Input starting room
+
+Create an empty set VISITED
+Create a queue
+Insert starting room into queue
+
+Level = 0
+
+WHILE queue is not empty
+    Count the number of rooms in the queue
+
+    Print current level
+
+    FOR each room in the current level
+        Remove room from queue
+
+        IF room is not visited
+            Mark room as visited
+            Print room
+
+            FOR each connected room
+                IF connected room is not visited
+                    Insert it into queue
+                END IF
+            END FOR
+        END IF
+    END FOR
+
+    Increase Level by 1
+END WHILE
+
+Print "All rooms visited successfully"
+
+STOP
