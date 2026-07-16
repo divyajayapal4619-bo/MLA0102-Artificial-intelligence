@@ -1,0 +1,28 @@
+START
+
+Input graph
+Input Source node
+Input Goal node
+
+Create a priority queue
+Insert (Source, Cost = 0, Path)
+
+While priority queue is not empty
+
+    Remove the node with minimum cost
+
+    If node is Goal
+        Display Path
+        Display Total Cost
+        STOP
+
+    Mark node as visited
+
+    For each neighboring node
+        If neighbor is not visited
+            Add neighbor to priority queue
+            with updated cost and path
+
+END While
+
+STOP
