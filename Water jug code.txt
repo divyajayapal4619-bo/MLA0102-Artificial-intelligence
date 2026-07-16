@@ -1,0 +1,22 @@
+START
+
+Input Jug1 capacity
+Input Jug2 capacity
+Input Goal amount
+
+Set Jug1 = 0
+Set Jug2 = 0
+
+Fill Jug1
+Pour water from Jug1 to Jug2
+
+Fill Jug1 again
+
+Pour water from Jug1 to Jug2 until Jug2 is full
+
+If remaining water in Jug1 equals Goal
+    Display "Goal Reached"
+Else
+    Display "Goal Not Reached"
+
+STOP
