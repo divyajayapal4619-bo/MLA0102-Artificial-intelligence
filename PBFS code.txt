@@ -1,0 +1,17 @@
+START
+Read Start Node and Goal Node
+Insert Start Node into Priority Queue using heuristic value
+
+WHILE queue is not empty
+    Remove node with smallest heuristic
+    IF node is Goal
+        Display path
+        STOP
+    Mark node as visited
+    FOR each neighbor
+        IF neighbor not visited
+            Save parent
+            Insert neighbor into queue
+END WHILE
+
+STOP

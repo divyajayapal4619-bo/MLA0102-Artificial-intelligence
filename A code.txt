@@ -1,0 +1,20 @@
+START
+Read Start Node and Goal Node
+Insert Start Node into Priority Queue
+Set Cost(Start) = 0
+
+WHILE queue is not empty
+    Remove node with lowest f(n)
+    IF node is Goal
+        Display shortest path and cost
+        STOP
+    FOR each neighbor
+        NewCost = CurrentCost + EdgeCost
+        IF NewCost is smaller
+            Update Cost
+            Save Parent
+            f(n) = NewCost + Heuristic
+            Insert into Priority Queue
+END WHILE
+
+STOP
