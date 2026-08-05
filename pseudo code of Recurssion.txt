@@ -1,0 +1,14 @@
+START
+
+Read n
+
+Function SUM(n)
+    IF n = 0
+        Return 0
+    ELSE
+        Return n + SUM(n-1)
+    END IF
+
+Display SUM(n)
+
+STOP

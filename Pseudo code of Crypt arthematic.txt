@@ -1,0 +1,15 @@
+START
+
+Take the letters in SEND, MORE, and MONEY
+
+Assign different digits to each letter
+
+Check that S and M are not zero
+
+Calculate SEND, MORE, and MONEY
+
+IF SEND + MORE = MONEY
+    Display the solution
+END IF
+
+STOP

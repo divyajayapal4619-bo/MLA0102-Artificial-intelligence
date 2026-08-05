@@ -1,0 +1,14 @@
+START
+
+Set Monkey = Door
+Set Box = Window
+Set Banana = Center
+
+Move Monkey to Box
+Push Box to Banana
+Climb on Box
+Pick Banana
+
+Display "Goal Achieved"
+
+STOP
