@@ -1,0 +1,28 @@
+START
+
+Create the dataset with:
+    Age, Income, Existing Loan, Loan Decision
+
+Load the Decision Tree Classifier
+
+Create empty lists X and Y
+
+FOR each record in the dataset:
+    Add Age, Income, and Existing Loan to X
+    Add Loan Decision to Y
+END FOR
+
+Train the Decision Tree model using X and Y
+
+Display "DECISION TREE"
+
+Create a new applicant:
+    Age = Middle
+    Income = High
+    Existing Loan = No
+
+Predict the loan decision using the trained model
+
+Display "Loan Decision: " + predicted result
+
+STOP

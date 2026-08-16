@@ -1,0 +1,41 @@
+ALGORITHM CryptArithmetic
+
+BEGIN
+
+    letters ← {S, E, N, D, M, O, R, Y}
+
+    FOR each permutation of 8 different digits from 0 to 9 DO
+
+        Assign digits to:
+        S, E, N, D, M, O, R, Y
+
+        IF S = 0 OR M = 0 THEN
+            CONTINUE
+        END IF
+
+        SEND ← 1000×S + 100×E + 10×N + D
+
+        MORE ← 1000×M + 100×O + 10×R + E
+
+        MONEY ← 10000×M + 1000×O + 100×N + 10×E + Y
+
+        IF SEND + MORE = MONEY THEN
+
+            PRINT "Solution found!"
+
+            PRINT S, E, N, D
+            PRINT M, O, R, Y
+
+            PRINT "SEND =", SEND
+            PRINT "MORE =", MORE
+            PRINT "MONEY =", MONEY
+
+            PRINT SEND + MORE = MONEY
+
+            BREAK
+
+        END IF
+
+    END FOR
+
+END

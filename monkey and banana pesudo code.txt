@@ -1,0 +1,31 @@
+START
+
+Set Robot Position = A
+Set Box Position = B
+Set Banana Position = C
+Set Has_Banana = FALSE
+
+Display "Initial State"
+Display Robot Position
+Display Box Position
+Display Banana Position
+
+IF Robot Position is not equal to Box Position THEN
+    Move Robot to Box
+END IF
+
+IF Box Position is not equal to Banana Position THEN
+    Push Box under Banana
+    Move Robot with Box to Banana
+END IF
+
+Climb the Box
+
+Pick the Banana
+Set Has_Banana = TRUE
+
+IF Has_Banana = TRUE THEN
+    Display "Goal Achieved! Robot has obtained the banana."
+END IF
+
+STOP

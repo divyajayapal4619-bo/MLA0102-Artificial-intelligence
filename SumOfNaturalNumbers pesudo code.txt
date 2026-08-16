@@ -1,0 +1,15 @@
+ALGORITHM SumOfNaturalNumbers(n)
+
+BEGIN
+    IF n = 1 THEN
+        RETURN 1
+    ELSE
+        RETURN n + SumOfNaturalNumbers(n - 1)
+    END IF
+END
+
+MAIN
+    INPUT n
+    result ← SumOfNaturalNumbers(n)
+    PRINT result
+END
