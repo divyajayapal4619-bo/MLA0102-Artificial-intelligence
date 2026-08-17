@@ -1,0 +1,17 @@
+fruit(apple).
+fruit(banana).
+fruit(orange).
+
+color(apple, red).
+color(banana, yellow).
+color(orange, orange).
+
+classify_fruit(Color, Fruit) :-
+    color(Fruit, Color).
+
+start :-
+    write('Enter fruit: '),
+    read(Fruit),
+    color(Fruit, Color),
+    write('Fruit: '), write(Fruit), nl,
+    write('Color: '), write(Color), nl.

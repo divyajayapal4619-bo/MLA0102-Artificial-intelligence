@@ -1,0 +1,42 @@
+START
+
+Set FACTS = {fly, cough}
+
+Set RULES:
+    furry → fly AND cough
+    rest → fly
+    doctor_visit → furry AND rest
+
+FUNCTION BACKWARD_CHAINING(goal, facts, rules)
+
+    IF goal is present in facts
+        RETURN TRUE
+
+    IF goal is already visited
+        RETURN FALSE
+
+    Add goal to visited
+
+    IF goal is not present in rules
+        RETURN FALSE
+
+    Get conditions required for goal
+
+    FOR each condition
+        IF BACKWARD_CHAINING(condition, facts, rules) is FALSE
+            RETURN FALSE
+
+    RETURN TRUE
+
+END FUNCTION
+
+Display "BACKWARD CHAINING"
+
+Read goal from user
+
+IF BACKWARD_CHAINING(goal, facts, rules) is TRUE
+    Display "Goal can be proved from facts"
+ELSE
+    Display "Goal cannot be proved from given facts"
+
+STOP

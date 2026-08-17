@@ -1,0 +1,43 @@
+START
+
+Set initial facts:
+    fly
+    cough
+
+Set rules:
+    furry ← fly AND cough
+    rest ← furry
+    doctor_visit ← furry AND rest
+
+FUNCTION forward_chaining(facts, rules)
+
+    REPEAT
+
+        Set changed = FALSE
+
+        FOR each rule
+
+            IF all conditions of the rule are present in facts THEN
+
+                IF conclusion is not already in facts THEN
+                    Add conclusion to facts
+                    Set changed = TRUE
+                END IF
+
+            END IF
+
+        END FOR
+
+    UNTIL changed = FALSE
+
+    Return final facts
+
+END FUNCTION
+
+Display initial facts
+
+Call forward_chaining()
+
+Display final facts
+
+STOP

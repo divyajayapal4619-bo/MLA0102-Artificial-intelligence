@@ -1,0 +1,24 @@
+planet(mercury, terrestrial, 1, 0).
+planet(venus, terrestrial, 2, 0).
+planet(earth, terrestrial, 3, 1).
+planet(mars, terrestrial, 4, 2).
+planet(jupiter, gas_giant, 5, 95).
+planet(saturn, gas_giant, 6, 146).
+
+planet_info(Name) :-
+    planet(Name, Type, Position, Moons),
+    write('Planet: '), write(Name), nl,
+    write('Type: '), write(Type), nl,
+    write('Position from Sun: '), write(Position), nl,
+    write('Number of moons: '), write(Moons), nl.
+
+start :-
+    write('PLANET KNOWLEDGE REPRESENTATION'), nl,
+    write('--------------------------------'), nl,
+    write('Enter planet name: '),
+    read(Name),
+    ( planet_info(Name) ->
+        true
+    ;
+        write('Planet not found in knowledge base.'), nl
+    ).
